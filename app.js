@@ -6,6 +6,7 @@ import paymentRoute from './routes/paymentRoutes.js';
 import movieInfo from './routes/movieInfo.js';
 import { get } from 'http';
 import {registerUser} from './routes/registerUser.js';
+// import userRoutes from './routes/userRoutes.js';
 
 const app = express();
 const __dirname = path.resolve(); // Get absolute path for reliability
@@ -23,6 +24,7 @@ app.use('/api', paymentRoute);
 
 app.use('/', movieInfo);
 app.use('/api/register', registerUser);
+// app.use('/api/register', userRoutes);
 
 app.get('/api/getkey', (req, res) => {
   res.status(200).json({

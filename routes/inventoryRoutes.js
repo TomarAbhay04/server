@@ -1,9 +1,9 @@
-import express from 'express';
-import { updateInventory, getInventoryStatus } from '../controllers/inventoryController.js';
+// import express from 'express';
+// import { updateInventory, getInventoryStatus } from '../controllers/inventoryController.js';
 
-const router = express.Router();
+// const router = express.Router();
 
-router.put('/:id', updateInventory);
-router.get('/', getInventoryStatus);
+// router.put('/:id', updateInventory);
+// router.get('/', getInventoryStatus);
 
-export default router;
+// export default router;

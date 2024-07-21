@@ -5,8 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
+<<<<<<< HEAD
+    "start": "nodemon server.js",
     "build": "server"
+=======
+    "start": "nodemon server.js"
+>>>>>>> origin/main
   },
   "author": "",
   "license": "ISC",

@@ -1,8 +1,8 @@
 import crypto from "crypto";
 import { instance } from "../server.js";
-import { Payment } from "../models/paymentModel.js";
+// import { Payment } from "../models/paymentModel.js";
 import { Movie, Booking } from "../models/movies.js"; // Booking model
-import { type } from "os";
+// import { type } from "os";
 
 export const checkout = async (req, res) => {
   try {
@@ -125,6 +125,8 @@ export const paymentVerification = async (req, res) => {
       movieTitle: movie.title,
       seats: selectedSeats.map((seat) => ({ ...seat, available: false })),
       paymentStatus: "paid",
+      bookedAt: new Date(),
+      //  bookedAt: bookingData.bookedAt ? new Date(bookingData.bookedAt) : null,
     });
 
     await booking.save();
